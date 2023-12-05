@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c9f7db03-dd1a-4022-8f37-daae8ceef4ef" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/.goreleaser.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/CODE-OF-CONDUCT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/GOVERNANCE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/MAINTAINERS.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/TODO.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/dependencies.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/go.mod" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/go.sum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/logger/logger.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/logger/logger_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/nats-streaming-server.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/scripts/cov.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/scripts/drop_postgres.db.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/scripts/mysql.db.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/scripts/postgres.db.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/bench_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/client.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/client_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/clustering.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/clustering_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/conf.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/conf_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/ft.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/ft_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/monitor.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/monitor_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/partitions.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/partitions_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/raft_log.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/raft_log_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/raft_transport.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/raft_transport_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/server.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/server_clients_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/server_delivery_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/server_durable_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/server_limits_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/server_queue_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/server_redelivery_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/server_req_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/server_run_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/server_storefailures_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/server_sub_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/server_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/service.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/service_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/service_windows.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/signal.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/signal_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/signal_windows.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/server/snapshot.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/spb/protocol.pb.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/spb/protocol.proto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/stores/bench_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/stores/common.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/stores/common_msg_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/stores/common_sub_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/stores/common_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/stores/cryptostore.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/stores/cryptostore_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/stores/filestore.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/stores/filestore_msg_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/stores/filestore_sub_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/stores/filestore_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/stores/limits.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/stores/limits_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/stores/memstore.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/stores/memstore_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/stores/pqdeadlines/pqdeadlines.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/stores/raftstore.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/stores/raftstore_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/stores/sqlstore.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/stores/sqlstore_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/stores/store.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/test/certs/ca.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/test/certs/client-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/test/certs/client-key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/test/certs/server-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/test/certs/server-key-noip.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/test/certs/server-key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/test/certs/server-noip.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/test/configs/multi_user.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/test/configs/test_parse.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/test/sqlstore.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/test/test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/util/channels.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/util/lockfile_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/util/lockfile_unix.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/util/lockfile_win.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/util/no_race.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/util/race.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/util/sublist.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/util/sublist_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/util/util.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../nats-streaming-server/util/util_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stan-pub/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/../stan-pub/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2YuktIzpmmQ6QuKm5dBtFMk1LMs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/darke/Desktop/WB_L0/stan-sub"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c9f7db03-dd1a-4022-8f37-daae8ceef4ef" name="Changes" comment="" />
+      <created>1701383064319</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701383064319</updated>
+    </task>
+    <servers />
+  </component>
+</project>

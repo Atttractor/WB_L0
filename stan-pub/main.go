@@ -26,7 +26,7 @@ func main() {
 	}
 	defer sc.Close()
 
-	file, _ := os.ReadFile(`C:\Users\Dooplik\Desktop\stan-pub\data.json`)
+	file, _ := os.ReadFile(`C:\Users\darke\Desktop\WB_L0\stan-pub\data.json`)
 
 	subj, msg := "foo", []byte(file)
 
