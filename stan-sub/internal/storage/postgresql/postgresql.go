@@ -121,7 +121,7 @@ func getDataByUid(uid string) mymodel.MyModel {
 }
 
 // TODO: тут надо подумать приходят ли валидные данные или стоит сделать проверку
-func saveData(m mymodel.MyModel) error {
+func SaveData(m mymodel.MyModel) error {
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
 		return err
@@ -155,7 +155,7 @@ func saveData(m mymodel.MyModel) error {
 	}
 
 	for _, item := range m.Items {
-		_, err = db.Exec(`insert into public.item values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)`, 
+		_, err = db.Exec(`insert into public.item values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)`, 
 			item.Chrt_id, item.Track_number, item.Price, item.Rid, item.Name, item.Sale, item.Size,
 			item.Total_price, item.Nm_id, item.Brand, item.Status,
 		)

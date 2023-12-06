@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <form action="/" method="get">
+        <h1>Введите UUID</h1>
+        <input type="text" name="uid"/>
+        <input type="submit"/>
+    </form>
+    <hr>
+    <table>
+        <tr>
+            <td>
+                <ul>
+                    <h3>order</h3>
+                    <li>order_uid: {{.Order_uid}}</li>
+                    <li>track_number: {{.Track_number}}</li>
+                    <li>entry: {{.Entry}}</li>
+                    <li>locale: {{.Locale}}</li>
+                    <li>internal_signature: {{.Internal_signature}}</li>
+                    <li>customer_id: {{.Customer_id}}</li>
+                    <li>delivery_service: {{.Delivery_service}}</li>
+                    <li>shardkey: {{.Shardkey}}</li>
+                    <li>sm_id: {{.Sm_id}}</li>
+                    <li>date_created: {{.Date_created}}</li>
+                    <li>oof_shard: {{.Oof_shard}}</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <h3>delivery</h3>
+                    <li>name: {{.Delivery.Name}}</li>
+                    <li>phone: {{.Delivery.Phone}}</li>
+                    <li>zip: {{.Delivery.Zip}}</li>
+                    <li>city: {{.Delivery.City}}</li>
+                    <li>address: {{.Delivery.Address}}</li>
+                    <li>region: {{.Delivery.Region}}</li>
+                    <li>email: {{.Delivery.Email}}</li>
+                    <li>-</li>
+                    <li>-</li>
+                    <li>-</li>
+                    <li>-</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <h3>payment</h3>
+                    <li>transaction: {{.Payment.Transaction}}</li>
+                    <li>request_id: {{.Payment.Request_id}}</li>
+                    <li>currency: {{.Payment.Currency}}</li>
+                    <li>provider: {{.Payment.Provider}}</li>
+                    <li>amount: {{.Payment.Amount}}</li>
+                    <li>payment_dt: {{.Payment.Payment_dt}}</li>
+                    <li>bank: {{.Payment.Bank}}</li>
+                    <li>delivery_cost: {{.Payment.Delivery_cost}}</li>
+                    <li>goods_total: {{.Payment.Goods_total}}</li>
+                    <li>custom_fee: {{.Payment.Custom_fee}}</li>
+                    <li>-</li>
+                </ul>
+            </td>
+            <td>
+                {{range $key, $value := .Items}}
+                <ul>
+                    <h3>item №{{$key}}</h3>
+                    <li>chrt_id: {{$value.Chrt_id}}</li>
+                    <li>track_number: {{$value.Track_number}}</li>
+                    <li>price: {{$value.Price}}</li>
+                    <li>rid: {{$value.Rid}}</li>
+                    <li>name: {{$value.Name}}</li>
+                    <li>sale: {{$value.Sale}}</li>
+                    <li>size: {{$value.Size}}</li>
+                    <li>total_price: {{$value.Total_price}}</li>
+                    <li>nm_id: {{$value.Nm_id}}</li>
+                    <li>brand: {{$value.Brand}}</li>
+                    <li>status: {{$value.Status}}</li>
+                </ul>
+            {{end}}
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

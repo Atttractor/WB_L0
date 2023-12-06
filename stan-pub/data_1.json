@@ -1,0 +1,50 @@
+{
+  "order_uid": "b222feb2b2b22b2test",
+  "track_number": "WBILMTESTTRACK_2",
+  "entry": "1111",
+  "delivery": {
+    "delivery_uuid": "b222feb2b2b22b2test",
+    "name": "1111",
+    "phone": "+9720000000",
+    "zip": "1111",
+    "city": "1111",
+    "address": "1111",
+    "region": "1111",
+    "email": "test@gmail.com"
+  },
+  "payment": {
+    "transaction": "b222feb2b2b22b2test",
+    "request_id": "1111",
+    "currency": "1111",
+    "provider": "1111",
+    "amount": 1111,
+    "payment_dt": 1111,
+    "bank": "1111",
+    "delivery_cost": 1111,
+    "goods_total": 1111,
+    "custom_fee": 1111
+  },
+  "items": [
+    {
+      "chrt_id": 1111,
+      "track_number": "WBILMTESTTRACK_2",
+      "price": 1111,
+      "rid": "1111",
+      "name": "1111",
+      "sale": 1111,
+      "size": "1111",
+      "total_price": 1111,
+      "nm_id": 1111,
+      "brand": "1111",
+      "status": 1111
+    }
+  ],
+  "locale": "1111",
+  "internal_signature": "1111",
+  "customer_id": "1111",
+  "delivery_service": "1111",
+  "shardkey": "1111",
+  "sm_id": 1111,
+  "date_created": "2021-11-26T06:22:19Z",
+  "oof_shard": "1111"
+}

@@ -9,12 +9,13 @@ import (
 	"Subscriber/internal/model"
 	"Subscriber/internal/storage/postgresql"
 	"encoding/json"
-	"fmt"
 	"log"
 	"net/http"
 	"os"
 	"os/signal"
+	"text/template"
 
+	"github.com/go-playground/validator/v10"
 	"github.com/nats-io/stan.go"
 )
 
@@ -22,9 +23,11 @@ func main() {
 	var (
 		clusterID string
 		clientID  string
-		URL       string
 		myModel   model.MyModel
 	)
+
+	// Validator
+	v := validator.New()
 
 	// Storage
 	mapa := postgresql.New()
@@ -32,55 +35,70 @@ func main() {
 	clusterID = "test-cluster"
 	clientID = "myID"
 
-	// Server
-	http.HandleFunc("/get", func(w http.ResponseWriter, r *http.Request) {
-		uid := r.URL.Query().Get("uid")
-
-		m1 := mapa[uid]
-
-		a, err := json.MarshalIndent(m1, "", "	")
-		if err != nil {
-			fmt.Println(err)
-		}
-
-		w.Write(a)
-	})
-	http.ListenAndServe(":80", nil)
-	log.Println("Server started")
-
 	// Subscriber
 	sc, err := stan.Connect(clusterID, clientID,
 		stan.SetConnectionLostHandler(func(_ stan.Conn, reason error) {
 			log.Fatalf("Connection lost, reason: %v", reason)
 		}))
 	if err != nil {
-		log.Fatalf("Can't connect: %v.\nMake sure a NATS Streaming Server is running at: %s", err, URL)
+		log.Fatalf("Не удалось подключится к nats-streming-server: %v", err)
 	}
-	log.Printf("Connected to clusterID: [%s] clientID: [%s]\n", clusterID, clientID)
+	log.Printf("Успешное подключение к nats-streming-server, clusterID: [%s] clientID: [%s]\n", clusterID, clientID)
 
 	subj := "foo"
 	sub, err := sc.Subscribe(subj, func(m *stan.Msg) {
+		log.Println("Новое сообщение!")
 		json.Unmarshal(m.Data, &myModel)
-		fmt.Println(myModel)
+		err := v.Struct(myModel)
+        if err != nil {
+            log.Fatalf("Данные не прошли валидацию: %s", err)
+        }
+
+		log.Println(myModel)
 		mapa[myModel.Order_uid] = myModel
+
+		err = postgresql.SaveData(myModel)
+		if err != nil {
+			log.Println(err)
+		}
 	})
 	if err != nil {
 		sc.Close()
 		log.Fatal(err)
 	}
 
-	log.Printf("Listening on [%s], clientID=[%s]\n", subj, clientID)
+	log.Printf("Канал: [%s], clientID=[%s]\n", subj, clientID)
 
 	signalChan := make(chan os.Signal, 1)
 	cleanupDone := make(chan bool)
 	signal.Notify(signalChan, os.Interrupt)
 	go func() {
 		for range signalChan {
-			fmt.Printf("\nReceived an interrupt, unsubscribing and closing connection...\n\n")
+			log.Printf("\nОтписка и закрытие подключения\n\n")
 			sub.Unsubscribe()
 			sc.Close()
 			cleanupDone <- true
 		}
 	}()
+
+	// Server
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		uid := r.URL.Query().Get("uid")
+    
+		m1 := mapa[uid]
+
+    	ts, err := template.ParseFiles(`C:\Users\Dooplik\Desktop\WB_L0\stan-sub\templates\index.html`)
+    	if err != nil {
+        	log.Println(err)
+    	}
+
+    	// Передаем структуру templateData в качестве данных для шаблона.
+    	err = ts.Execute(w, m1)
+    	if err != nil {
+			log.Println(err)
+    	}
+	})
+	http.ListenAndServe(":80", nil)
+
 	<-cleanupDone
 }
