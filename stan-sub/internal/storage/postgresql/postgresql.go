@@ -38,7 +38,6 @@ func New() map[string]mymodel.MyModel {
 	return mapa
 }
 
-// TODO: надо дописать всякие злоебучие проверки на то, что такая запись в базе существует и тд и тп
 func getDataByUid(uid string) mymodel.MyModel {
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
@@ -120,7 +119,6 @@ func getDataByUid(uid string) mymodel.MyModel {
 	return model
 }
 
-// TODO: тут надо подумать приходят ли валидные данные или стоит сделать проверку
 func SaveData(m mymodel.MyModel) error {
 	db, err := sql.Open("postgres", connStr)
 	if err != nil {
